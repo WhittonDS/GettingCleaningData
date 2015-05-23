@@ -19,9 +19,6 @@ loadData <- function(){
         # Load: feature names so they can be used as data column names
         feature_names <- read.table("./UCI HAR Dataset/features.txt")[,2]
         
-        # Generate True/False logicals to denote only the measurements on the mean and standard deviation for each measurement.
-        mstd_features <- grepl("mean|std", feature_names)
-        
         # Load and process Test data: X_test, y_test, subject_test into data tables for use later
         test_X <- read.table("./UCI HAR Dataset/test/X_test.txt")
         test_Y <- read.table("./UCI HAR Dataset/test/y_test.txt")
@@ -39,6 +36,9 @@ loadData <- function(){
         
         # Put descriptive names
         names(data_x) = feature_names
+        
+        # Generate True/False logicals to denote only the measurements on the mean and standard deviation for each measurement.
+        mstd_features <- grepl("mean|std", feature_names)
         
         # Extract only the measurements on the mean and standard deviation for each measurement.
         data_x = data_x[,mstd_features]        

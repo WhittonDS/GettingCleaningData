@@ -1,6 +1,6 @@
 # Code Book
 
-This project combined files that contained the raw data, test subject, and descriptive information.
+This project combined files that contained the raw data, test subject, and descriptive information. A file named "tidy_data.txt" is created as a result of running this code. Said file will be available in the current working directory. Use the getwd() command to make sure you know the location of the working directory.
 
 #The data source
 Original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip

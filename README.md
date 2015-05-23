@@ -20,7 +20,8 @@
                 Extract only the measurements on the mean and standard deviation for each measurement.
                 Load activity data
                 Bind data
-                Merge test and train data
+                
+        Merge test and train data
                 
         Create another independent tidy data set with the average using the mean function to via dcast
         Write out the tidy_data set to a text file in the working directory
